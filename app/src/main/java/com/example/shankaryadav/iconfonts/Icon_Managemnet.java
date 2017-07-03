@@ -6,14 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.sql.Time;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Hashtable;
-import java.util.TimeZone;
 
 public class Icon_Managemnet extends AppCompatActivity {
 
@@ -43,19 +36,7 @@ public class Icon_Managemnet extends AppCompatActivity {
             cached_icon.put(path, icon);
         }
 
-        Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+5:30"));
-
-        Date StartTime = cal.getTime();
-
-        DateFormat date = new SimpleDateFormat("HH:mm:ss:ms");
-
-        date.setTimeZone(TimeZone.getTimeZone("GMT+5:30"));
-
-        String Start_Time = date.format(StartTime);
-
-        Log.i("Start Time.......", Start_Time);
-
-
+        long StartTime = System.currentTimeMillis();
 
         textView = (TextView)findViewById(R.id.textView);
 
@@ -72,15 +53,12 @@ public class Icon_Managemnet extends AppCompatActivity {
 
         imagePragmatically.setImageResource(R.drawable.car_police);
 
+        long EndTime = System.currentTimeMillis();
 
-        Date EndTime = cal.getTime();
+        Log.i("Starting Time   ", Integer.toString((int) StartTime).toString() + " ms");
 
-        DateFormat date1 = new SimpleDateFormat("HH:mm:ss:ms");
+        Log.i("Ending Time   ", Integer.toString((int) EndTime).toString() + " ms");
 
-        date1.setTimeZone(TimeZone.getTimeZone("GMT+5:30"));
-
-        String End_Time = date1.format(EndTime);
-
-        Log.i("End Time.......", End_Time);
+        Log.i("Run Time in   ", Integer.toString((int) (EndTime - StartTime)).toString() + " ms");
     }
 }
