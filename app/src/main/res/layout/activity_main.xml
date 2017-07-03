@@ -7,14 +7,42 @@
     android:layout_height="match_parent"
     tools:context="com.example.shankaryadav.iconfonts.Icon_Managemnet">
 
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="200dp"
+        app:srcCompat="@drawable/new_icon_vd" />
+
+    <ImageView
+        android:id="@+id/im2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="400dp"
+        app:srcCompat="@drawable/car_police" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="173dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="80dp"
         android:textSize="50sp"
-        android:text="@string/my_test" />
+        android:text="@string/song_icon" />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/my_text"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        />
+
 </RelativeLayout>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">IconFonts</string>
-    <string name="my_test">&#xe096;</string>
+    <string name="song_icon">&#xe096;</string>
+    <string name="my_text">Vector Drawable Testing...</string>
 </resources>
